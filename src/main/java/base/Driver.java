@@ -11,6 +11,7 @@ public class Driver extends ReadProperties{
 	static WebDriver driver;
 
 	public void setDriver(String browserType, String appUrl) {
+		
 		if (browserType.equalsIgnoreCase("firefox")) {
 			initFirefox();
 		} else {
