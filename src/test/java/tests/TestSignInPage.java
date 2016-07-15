@@ -23,5 +23,14 @@ public class TestSignInPage extends TestBase {
 		signInPage.signin("ruhulnyD10@gmail.com", "as9871235");
 		Assert.assertEquals(signInPage.errorMessage.get(0).getText(), "* Email or Password is incorrect.");
 	}
+	
+	@Test
+	public void testWithJobseekerId(){
+		signInPage.signin("ruhulnyD10@gmail.com", "as9871235");
+		menuBar.contactUs.click();
+		Assert.assertTrue(contactUs.getCurrentUrl().contains("contactus.php"));
+		
+		
+	}
 
 }
