@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -46,12 +48,16 @@ public class RegistrationPage extends PageBase {
 	public WebElement captchaField;
 	
 	@FindBy( name = "Privacy")
-	public WebElement privacyField;
+	public WebElement privacyCheckBox;
 	
 	@FindBy( name = "Subscribe")
 	public WebElement subscribefield;
 	
 	@FindBy( name = "submit")
 	public WebElement submitButton;
+	
+	@FindBy(id = "error")
+	public List<WebElement> errorWebElementList;
+	
 
 }
